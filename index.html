@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluetoothサウンドデバイス</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px 0;
+            background-color: #3ca9e2; /* 水色 */
+            color: white; /* 白色の文字 */
+            border-radius: 10px; /* 角を丸く */
+            border: none; /* ボーダーなし */
+            outline: none; /* アウトラインなし */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Bluetoothサウンドデバイス</h1>
+
+        <img src="3860/sp1.jpg" alt="デバイス画像">
+
+        <button onclick="playSound('3860/電源オン.m4a')">電源オン</button>
+        <button onclick="playSound('3860/電源オフ.m4a')">電源オフ</button>
+        <button onclick="playSound('3860/接続.m4a')">Bluetooth接続</button>
+        <button onclick="playSound('3860/切断.m4a')">Bluetooth切断</button>
+        <button onclick="playSound('3860/tfsd.m4a')">TF(SD)モード</button>
+        
+        <!-- 追加はここです。 -->
+    </div>
+    
+    <script>
+        function playSound(soundFile) {
+            var audio = new Audio(soundFile);
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>
